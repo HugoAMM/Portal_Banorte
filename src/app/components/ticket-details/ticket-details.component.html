@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="columns title">
+    <div class="column is-11 align-baseline title">
+      Información del ticket
+    </div>
+    <div class="column align-baseline">
+      <button mat-icon-button color="primary" (click)="closeModal()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column">
+      <mat-list>
+        <mat-list-item>
+          <div class="key pr-2">Número de ticket: </div>
+          <div class="value">{{data.numTicket}}</div>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+        <mat-list-item>
+          <div class="key pr-2">Fecha de apertura: </div>
+          <div class="value">{{data.openDate | date: "short" }}</div>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+        <mat-list-item>
+          <div class="key pr-2">Fecha de cierre: </div>
+          <div class="value">{{data.closedDate | date: "short" }}</div>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+      </mat-list>
+    </div>
+    <div class="column">
+      <mat-list>
+        <mat-list-item>
+          <div class="key pr-2">Estatus: </div>
+          <div class="value">{{data.status}}</div>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+        <mat-list-item>
+          <div class="key pr-2">Prioridad: </div>
+          <div class="value">{{data.numTicket}}</div>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+        <mat-list-item>
+          <div class="key pr-2">Asignado a: </div>
+          <div class="value">{{data.assignedTo}}</div>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column">
+      <mat-list>
+        <mat-list-item>
+          <div class="key pr-2">Resumen: </div>
+          <div class="value">{{data.summary}}</div>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+        <mat-list-item>
+          <div class="key pr-2">Descripción: </div>
+          <div class="value">{{data.description}}</div>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+        <mat-list-item>
+          <div class="key pr-2">Solución: </div>
+          <div class="value">{{data.solution}}</div>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+</div>

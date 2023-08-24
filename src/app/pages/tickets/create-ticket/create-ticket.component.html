@@ -1,0 +1,180 @@
+<div class="container">
+  <div class="columns mt-4">
+    <div class="column title boc-font">Tickets</div>
+    <div class="column has-text-right">
+      <button class="button is-rounded btn-create" [disabled]="ticketFormBuilder.invalid" (click)="createTicket()">
+        Crear
+      </button>
+    </div>
+  </div>
+  <div class="columns">
+    <form [formGroup]="ticketFormBuilder" class="container is-widescreen">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-header-title card-title  boc-font">Ticket</div>
+        </div>
+        <div class="card-content">
+          <div class="content">
+            <div class="columns">
+              <div class="column">
+                <mat-form-field appearance="fill" class="full-width boc-font">
+                  <mat-label class="boc-font">Solicitante</mat-label>
+                  <input matInput type="text" formControlName="applicant" />
+                </mat-form-field>
+              </div>
+              <div class="column">
+                <mat-form-field appearance="fill" class="full-width boc-font">
+                  <mat-label>Estatus</mat-label>
+                  <input matInput type="text" formControlName="status" />
+                  <!-- <mat-select formControlName="status">
+                    <mat-option *ngFor="let _status of status" [value]="_status">
+                      {{ _status }}
+                    </mat-option>
+                  </mat-select> -->
+                </mat-form-field>
+              </div>
+              <div class="column">
+                <mat-form-field appearance="fill" class="full-width boc-font">
+                  <mat-label>Tipo de Ticket</mat-label>
+                  <!-- <mat-select [(ngModel)]="selectedTicketType" (selectionChange)="[getCategories(), getTypes()]" -->
+                  <mat-select class="boc-font" [(ngModel)]="selectedTicketType" (selectionChange)="getCategories()"
+                    formControlName="ticketType">
+                    <mat-option class="boc-font" *ngFor="let ticketType of ticketsType" [value]="ticketType">
+                      {{ ticketType }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div class="column">
+                <mat-form-field appearance="fill" class="full-width boc-font">
+                  <mat-label>Prioridad</mat-label>
+                  <mat-select class="boc-font" formControlName="priority">
+                    <mat-option class="boc-font" *ngFor="let priority of priorities" [value]="priority">
+                      {{ priority }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column">
+                <mat-form-field appearance="fill" class="full-width boc-font">
+                  <mat-label>Categoría</mat-label>
+                  <mat-select class="boc-font" [(ngModel)]="selectedCategory" (selectionChange)="getSubcategories()"
+                    formControlName="category" (selectionChange)="categorySelectionChange($event)">
+                    <mat-option class="boc-font" *ngFor="let category of categories" [value]="category">
+                      {{ category }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div class="column">
+                <mat-form-field appearance="fill" class="full-width boc-font">
+                  <mat-label>Subcategoría</mat-label>
+                  <mat-select class="boc-font" formControlName="subcategory">
+                    <mat-option class="boc-font" *ngFor="let subcategory of subcategories" [value]="subcategory">
+                      {{ subcategory }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <!-- <div class="column">
+                <mat-form-field appearance="fill" class="full-width">
+                  <mat-label>Tipo</mat-label>
+                  <mat-select formControlName="type">
+                    <mat-option *ngFor="let type of types" [value]="type">
+                      {{ type }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>-->
+            </div>
+            <div class="columns">
+              <div class="column">
+                <app-form-wsa class="full-width"
+                  *ngIf="ticketFormBuilder.controls['category'].value == 'Filtrado web WSA'"
+                  (dataEmmiter)="validateDynamicData($event)">
+                </app-form-wsa>
+
+                <app-form-fws class="full-width"
+                  *ngIf="ticketFormBuilder.controls['category'].value == 'Firewall Cisco/Palo Alto'"
+                  (dataEmmiter)="validateDynamicData($event)">
+                </app-form-fws>
+              </div>
+              <!--
+              <div class="column">
+                <mat-form-field appearance="fill" class="full-width">
+                  <mat-label>IP Origen</mat-label>
+                  <input type="text" matInput formControlName="sourceIPAddres" />
+                </mat-form-field>
+              </div>
+              <div class="column">
+                <mat-form-field appearance="fill" class="full-width boc-font">
+                  <mat-label>IP Destino</mat-label>
+                  <input type="text" matInput formControlName="destinationIPAddres" />
+                </mat-form-field>
+              </div>
+              <div class="column">
+                <mat-form-field appearance="fill" class="full-width boc-font">
+                  <mat-label>Puerto</mat-label>
+                  <input type="number" matInput formControlName="port" />
+                  <mat-error *ngIf="ticketFormBuilder.controls['port'].hasError('min')">
+                    Por favor, ingresa un puerto válido.
+                  </mat-error>
+                </mat-form-field>
+              </div>
+            -->
+            </div>
+            <div class="columns is-justify-content-center">
+              <div class="column is-10">
+                <mat-form-field appearance="fill" class="full-width boc-font">
+                  <mat-label>Título del ticket</mat-label>
+                  <input matInput type="text" formControlName="summary"
+                    placeholder="Ej. Solicitud de apertura de puerto." />
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="columns is-justify-content-center">
+              <div class="column is-10">
+                <mat-form-field appearance="fill" class="full-width boc-font">
+                  <mat-label>Descripción</mat-label>
+                  <textarea matInput rows="4" type="text" formControlName="description"></textarea>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <mat-card class="attachment-mat-card">
+        <mat-card-content>
+          <table>
+            <tbody>
+              <tr>
+                <td class="select-file-btn">
+                  <input formControlName="file" type="file" class="file-input" [accept]="requiredFileType"
+                    (change)="selectFile($event)" #fileUpload>
+                  <button type="button" mat-raised-button color="primary" class="upload-btn boc-font"
+                    (click)="fileUpload.click()">
+                    Seleccionar Archivo
+                  </button>
+                </td>
+
+                <td class="boc-font">
+                  <span>{{fileAttachmentInfo.fileName || "Seleccione un archivo, por favor."}}</span>
+                </td>
+
+                <td class="delete-file-btn">
+                  <button mat-icon-button color="warn" type="button" (click)="removeFile()"
+                    *ngIf="fileAttachmentInfo.fileName">
+                    <mat-icon>close</mat-icon>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </mat-card-content>
+      </mat-card>
+    </form>
+  </div>
+</div>

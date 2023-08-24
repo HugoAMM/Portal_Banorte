@@ -1,0 +1,36 @@
+<div>
+  <table class="table boc-font m-0">
+    <caption></caption>
+    <thead>
+        <tr>
+            <th class="font-header"
+                *ngFor="let header of headers">{{ header.title }}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let d of dataSource.data">
+            <td class="font-body row-table" (click)="clickRowBody(d)"
+                *ngFor="let h of headers">
+                <div *ngIf="d?.tooltip; else elseBlock" #tooltip="matTooltip"
+                    [matTooltip]="getTooltipMessage(d, h)" matTooltipShowDelay="1000"
+                    [matTooltipClass]="d?.tooltipFontSize">
+                    {{ h.pipe ? (d[h.key] | simpleTable: h.pipe) : d[h.key]}}
+                </div>
+                <ng-template #elseBlock>
+                    {{ h.pipe ? (d[h.key] | simpleTable: h.pipe) : d[h.key]}}
+                    <div *ngIf="h.icon">
+                      <mat-icon [class]="h.colorIcon ? h.colorIcon : ''">
+                        {{ h.icon }}
+                      </mat-icon>
+                    </div>
+                </ng-template>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+    showFirstLastButtons>
+  </mat-paginator>
+</div>
+

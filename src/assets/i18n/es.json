@@ -1,0 +1,76 @@
+{
+  "language": {
+    "es": "Español",
+    "en": "Inglés"
+  },
+  "theme": {
+    "default": "Por Defecto",
+    "dark": "Oscuro",
+    "axity": "Axity"
+  },
+  "login": {
+    "username": {
+      "title": "Usuario",
+      "errors": {
+        "required": "Usuario requerido"
+      }
+    },
+    "password": {
+      "title": "Contraseña",
+      "errors": {
+        "required": "Contraseña requerida"
+      }
+    },
+    "login-button": "Ingresar"
+  },
+  "home": {
+    "title": "Inicio"
+  },
+  "users": {
+    "title": "Usuarios",
+    "columns": {
+      "name":"Nombre",
+      "age":"Edad",
+      "phone":"Teléfono"
+    },
+    "create": "Crear usuario"
+  },
+  "colors": {
+    "title": "Colores",
+    "columns": {
+      "name": "Nombre",
+      "year": "Año",
+      "color": "Color",
+      "pantone": "Pantone"
+    }
+  },
+  "dashboard": {
+    "title": "Panel"
+  },
+  "estimations": {
+    "userInfo": {
+      "contactName": "Nombre de Contacto",
+      "client": "Cliente", 
+      "contactEmail": "Email de Contacto", 
+      "country": "País",
+      "summary": "Breve Descripción",
+      "nextBtn": "Siguiente"
+    },
+    "estimationDetail": {
+      "requestComponent": {
+        "client": "Cliente",
+        "request": "ID Solicitud"
+      }
+    },
+    "admin": {
+      "project": "Proyecto",
+      "category": "Categoría",
+      "feature": "Característica",
+      "summary": "Breve descripción",
+      "tooltip": "Tooltip de ayuda",
+      "estimatedHours": "Horas estimadas",
+      "costPerHour": "Costo Hora",
+      "createBtn": "Crear"
+    }
+  }
+}

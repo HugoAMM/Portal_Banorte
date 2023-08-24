@@ -1,0 +1,62 @@
+.main-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.loading-bar {
+  position: absolute;
+}
+
+.content {
+  height: 100%;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  margin: 0;
+  //padding: 24px 0 24px 0;
+}
+
+.header,
+.footer {
+  flex: 0 0 auto;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+
+  span {
+    font-size: smaller;
+    font-weight: lighter;
+  }
+}
+
+.logo {
+  height: 100%;
+  width: 10%;
+  padding: 12px 0 12px 0;
+}
+
+@font-face {
+  font-family: bocFont;
+  src: url("./../assets/font/VitaStd-Regular.otf");
+}
+
+.boc-font {
+  font-family: "bocFont", sans-serif;
+}
+
+.background-color {
+  background-color: #f4f4f4;
+  width: 100%;
+  height: 93vh;
+}
+
+.sidenav-banorte {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #eee;
+}

@@ -1,0 +1,33 @@
+.font-header {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+.font-body {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+.boc-font {
+  font-family: "bocFont", sans-serif;
+}
+.red-banorte {
+  color: #EC1C2D;
+}
+.row-table{
+  vertical-align: middle
+}
+::ng-deep .cell-tooltip-12 {
+  font-size: 12px !important;
+}
+::ng-deep .cell-tooltip-14 {
+  font-size: 14px !important;
+}
+::ng-deep .cell-tooltip-16 {
+  font-size: 16px !important;
+}
+:host-context(.row-cursor-pointer) {
+  tr td {
+      cursor: pointer;
+  }
+}

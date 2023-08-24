@@ -1,0 +1,16 @@
+<mat-toolbar class="header">
+  <span class="example-spacer"></span>
+  <div>
+    <mat-chip-list>
+      <mat-chip class="boc-font">
+        {{ initialLetter }}
+      </mat-chip>
+    </mat-chip-list>
+  </div>
+  <div class="user-name mx-2 boc-font">
+    {{ userName }}
+  </div>
+  <button id="btn-logout" mat-icon-button class="example-icon favorite-icon ml-5" (click)="logout()">
+    <mat-icon svgIcon="logout" class="icon-logout"></mat-icon>
+  </button>
+</mat-toolbar>

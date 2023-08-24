@@ -1,0 +1,28 @@
+<div class="container mt-4">
+  <div class="columns is-centered mb-5 pb-5">
+    <mat-icon svgIcon="logo-banorte" class="icon-logo-banorte"></mat-icon>
+  </div>
+  <div class="columns is-centered mt-5 pt-4">
+    <mat-button-toggle-group vertical [value]="selectedMenu" class="button-toggle">
+      <mat-button-toggle value="create-ticket" [routerLink]="['/tickets/create']">
+        <div class="columns is-centered py-3 m-0">
+          <mat-icon svgIcon="create-ticket"></mat-icon>
+        </div>
+        <div class="columns is-centered pb-2 m-0 label-buttons boc-font">Tickets</div>
+      </mat-button-toggle>
+      <mat-button-toggle value="history" [routerLink]="['/tickets/history']">
+        <div class="columns is-centered py-3 m-0">
+          <mat-icon svgIcon="tickets-history"></mat-icon>
+        </div>
+        <div class="columns is-centered pb-2 m-0 label-buttons boc-font">Historial</div>
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+  <div class="columns is-centered container-support-button">
+    <div class="is-align-self-flex-end">
+      <button mat-icon-button>
+        <mat-icon svgIcon="support" class="support-button"></mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

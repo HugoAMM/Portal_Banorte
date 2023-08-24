@@ -1,0 +1,28 @@
+{
+  "categories": [
+    {
+      "ticketType": "Solicitud de requerimiento",
+      "categories": [
+        "Correo en Cisco ESA",
+        "Filtrado web WSA",
+        "Autenticación Cisco ISE",
+        "Firewall Cisco/Palo Alto",
+        "IPS Cisco",
+        "VPN AnyConnect",
+        "VPN L2L (Entidades externas)"
+      ]
+    },
+    {
+      "ticketType": "Incidente",
+      "categories": [
+        "Correo en Cisco ESA",
+        "Filtrado web WSA",
+        "Autenticación Cisco ISE",
+        "Firewall Cisco/Palo Alto",
+        "IPS Cisco",
+        "VPN AnyConnect",
+        "VPN L2L (Entidades externas)"
+      ]
+    }
+  ]
+}

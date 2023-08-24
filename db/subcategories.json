@@ -1,0 +1,193 @@
+{
+  "subcategories": [
+    {
+      "ticketType": "Solicitud de requerimiento",
+      "category": "Correo en Cisco ESA",
+      "subcategories": [
+        "Apertura de casos proactivos con Fabricante",
+        "Aplicación de mejoras y Hardening",
+        "Aplicación de Parches o actualizaciones",
+        "Bloqueo de dominios específicos",
+        "Ejecución de control de cambios",
+        "Monitoreo y HealthCheck",
+        "Nuevas integraciones.",
+        "Permiso para dominios específicos"
+      ]
+    },
+    {
+      "ticketType": "Solicitud de requerimiento",
+      "category": "Filtrado web WSA",
+      "subcategories": [
+        "Apertura de casos proactivos con Fabricante",
+        "Aplicación de mejoras y Hardening",
+        "Aplicación de Parches o actualizaciones",
+        "Bloqueo de URL específicos",
+        "Ejecución de control de cambios",
+        "Generación de nuevas reglas de filtrado web",
+        "Monitoreo y HealthCheck",
+        "Nuevas integraciones.",
+        "Permiso para URL específicos"
+      ]
+    },
+    {
+      "ticketType": "Solicitud de requerimiento",
+      "category": "Autenticación Cisco ISE",
+      "subcategories": [
+        "Acceso a la red para usuarios/equipos específicos",
+        "Apertura de casos proactivos con Fabricante",
+        "Aplicación de mejoras y Hardening",
+        "Aplicación de Parches o actualizaciones",
+        "Bloqueo de usuarios/equipos específicos",
+        "Ejecución de control de cambios",
+        "Generación de nuevas reglas AAA",
+        "Monitoreo y HealthCheck",
+        "Nuevas integraciones.",
+        "Registro de equipos en TACACS"
+      ]
+    },
+    {
+      "ticketType": "Solicitud de requerimiento",
+      "category": "Firewall Cisco/Palo Alto",
+      "subcategories": [
+        "Apertura de casos proactivos con Fabricante",
+        "Aplicación de mejoras y Hardening",
+        "Aplicación de Parches o actualizaciones",
+        "Consultoría, dudas",
+        "Ejecución de control de cambios",
+        "Monitoreo y HealthCheck",
+        "Nuevas integraciones.",
+        "Solicitud de modificación/generación de reglas de acceso"
+      ]
+    },
+    {
+      "ticketType": "Solicitud de requerimiento",
+      "category": "IPS Cisco",
+      "subcategories": [
+        "Apertura de casos proactivos con Fabricante",
+        "Aplicación de mejoras y Hardening",
+        "Aplicación de Parches o actualizaciones",
+        "Consultoría, dudas",
+        "Ejecución de control de cambios",
+        "Monitoreo y HealthCheck",
+        "Nuevas integraciones.",
+        "Solicitud de modificación/generación de reglas de acceso"
+      ]
+    },
+    {
+      "ticketType": "Solicitud de requerimiento",
+      "category": "VPN AnyConnect",
+      "subcategories": [
+        "Apertura de casos proactivos con Fabricante",
+        "Aplicación de mejoras y Hardening",
+        "Aplicación de Parches o actualizaciones",
+        "Consultoría, dudas",
+        "Ejecución de control de cambios",
+        "Monitoreo y HealthCheck",
+        "Nuevas integraciones.",
+        "Solicitud de modificación/generación de VPN"
+      ]
+    },
+    {
+      "ticketType": "Solicitud de requerimiento",
+      "category": "VPN L2L (Entidades externas)",
+      "subcategories": [
+        "Apertura de casos proactivos con Fabricante",
+        "Aplicación de mejoras y Hardening",
+        "Aplicación de Parches o actualizaciones",
+        "Consultoría, dudas",
+        "Ejecución de control de cambios",
+        "Monitoreo y HealthCheck",
+        "Nuevas integraciones.",
+        "Solicitud de modificación/generación de VPN"
+      ]
+    },
+    {
+      "ticketType": "Incidente",
+      "category": "Correo en Cisco ESA",
+      "subcategories": [
+        "Afectación total en envío o recepción de correos",
+        "Alarmas en Cisco ESA",
+        "Correo no se entrega a destino",
+        "Correos con alarmas de phishing, virus o malware",
+        "Correos no se reciben en buzón de usuario",
+        "Incidentes de seguridad, vulnerabilidades y bugs",
+        "Retrasos en llegada o recepción de correos"
+      ]
+    },
+    {
+      "ticketType": "Incidente",
+      "category": "Filtrado web WSA",
+      "subcategories": [
+        "Afectación total en navegación",
+        "Alarmas en Cisco WSA",
+        "Bloqueo de páginas web",
+        "Falla en autenticación al navegación web",
+        "Incidentes de seguridad, vulnerabilidades y bugs",
+        "Lentitud en navegación",
+        "Páginas web permitidas que no deberían"
+      ]
+    },
+    {
+      "ticketType": "Incidente",
+      "category": "Autenticación Cisco ISE",
+      "subcategories": [
+        "Afectación total en autenticación",
+        "Bloqueo de servicios en VPN",
+        "Error en autenticación doble factor TACACS",
+        "Error en autenticación TACACS",
+        "Falla en autenticación en red inalámbrica o alámbrica",
+        "Falla en Autenticación en VPN AnyConnect",
+        "Falla en módulos de AnyConnect",
+        "Incidentes de seguridad, vulnerabilidades y bugs"
+      ]
+    },
+    {
+      "ticketType": "Incidente",
+      "category": "Firewall Cisco/Palo Alto",
+      "subcategories": [
+        "Afectación total en Firewall",
+        "Alarmas en Firewall",
+        "Bloqueo de flujos de tráfico",
+        "Flapeos o interrupciones en la red",
+        "Incidentes de seguridad, vulnerabilidades y bugs",
+        "Reporte de lentitud en aplicaciones",
+        "Reportes por Failover"
+      ]
+    },
+    {
+      "ticketType": "Incidente",
+      "category": "IPS Cisco",
+      "subcategories": [
+        "Afectación total en IPS",
+        "Alarmas en IPS",
+        "Bloqueo de flujos de tráfico",
+        "Flapeos o interrupciones en la red",
+        "Incidentes de seguridad, vulnerabilidades y bugs",
+        "Reporte de lentitud en aplicaciones"
+      ]
+    },
+    {
+      "ticketType": "Incidente",
+      "category": "VPN AnyConnect",
+      "subcategories": [
+        "Afectación total en IPS",
+        "Alarmas en concentrador de VPN AnyConnect",
+        "Bloqueo de flujos de tráfico",
+        "Error al ingresar a VPN AnyConnect",
+        "Módulo \"scan\" de AnyConnect no funciona"
+      ]
+    },
+    {
+      "ticketType": "Incidente",
+      "category": "VPN L2L (Entidades externas)",
+      "subcategories": [
+        "Afectación total de concentrador VPN",
+        "Alarmas en concentrador de VPN",
+        "Bloqueo de flujos de tráfico",
+        "Caída de VPN",
+        "Flapeos o interrupciones de VPN",
+        "Incidentes de seguridad, vulnerabilidades y bugs"
+      ]
+    }
+  ]
+}

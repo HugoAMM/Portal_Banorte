@@ -1,0 +1,23 @@
+<!--
+<mat-toolbar class="header" color="primary">
+  <span>BOC</span>
+</mat-toolbar>
+<mat-progress-bar
+  class="loading-bar"
+  color="accent"
+  *ngIf="isLoading | async"
+  mode="indeterminate"
+></mat-progress-bar>
+-->
+
+<mat-sidenav-container class="sidenav-banorte">
+  <mat-sidenav mode="side" opened>
+    <app-banorte-sidenav></app-banorte-sidenav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-banorte-toolbar></app-banorte-toolbar>
+    <div class="content background-color">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="columns mt-4 is-align-items-baseline">
+    <div class="column is-5 title boc-font">
+      Historial
+    </div>
+    <div class="column has-text-right">
+      <form [formGroup]="searchTicketBuilder">
+        <mat-form-field appearance="outline" class="mr-4">
+          <mat-label class="boc-font">Buscar ticket</mat-label>
+          <input type="text" matInput formControlName="text" (keyup)="applyFilter($event)">
+          <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+        <button class="button is-rounded btn-export m-2 boc-font">
+          <mat-icon class="mr-2">download</mat-icon>
+          Exportar
+        </button>
+        <button class="button is-rounded btn-create m-2 boc-font" [routerLink]="['/tickets/create']">
+          <mat-icon class="mr-2">add</mat-icon>
+          Crear ticket
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column">
+      <app-basic-table [headers]="headersTable" [dataSource]="dataSource" [clickRowBody]="openDetailModal"
+        class="row-cursor-pointer">
+      </app-basic-table>
+    </div>
+  </div>
+</div>

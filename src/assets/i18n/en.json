@@ -1,0 +1,76 @@
+{
+  "language": {
+    "es": "Spanish",
+    "en": "English"
+  },
+  "theme": {
+    "default": "Default",
+    "dark": "Dark",
+    "axity": "Axity"
+  },
+  "login": {
+    "username": {
+      "title": "Username",
+      "errors": {
+        "required": "Username required"
+      }
+    },
+    "password": {
+      "title": "Password",
+      "errors": {
+        "required": "Password required"
+      }
+    },
+    "login-button": "Login"
+  },
+  "home": {
+    "title": "Home"
+  },
+  "users": {
+    "title": "Users",
+    "columns": {
+      "name":"Name",
+      "age":"Age",
+      "phone":"Phone"
+    },
+    "create": "Create user"
+  },
+  "colors": {
+    "title": "Colors",
+    "columns": {
+      "name": "Name",
+      "year": "Year",
+      "color": "Color",
+      "pantone": "Pantone"
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard"
+  },
+  "estimations": {
+    "userInfo": {
+      "contactName": "Contact Name",
+      "client": "Client", 
+      "contactEmail": "Contact Email", 
+      "country": "Country",
+      "summary": "Summary",
+      "nextBtn": "Next"
+    },
+    "estimationDetail": {
+      "requestComponent": {
+        "client": "Client",
+        "request": "Request ID"
+      }
+    },
+    "admin": {
+      "project": "Project",
+      "category": "Category",
+      "feature": "Feature",
+      "summary": "Summary",
+      "tooltip": "Help Tooltip",
+      "estimatedHours": "Estimated Hours",
+      "costPerHour": "Hour Cost",
+      "createBtn": "Create"
+    }
+  }
+}

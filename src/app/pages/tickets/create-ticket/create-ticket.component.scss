@@ -1,0 +1,61 @@
+.title {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #EC1C2D;
+}
+
+.btn-save{
+  background-color: #777778;
+  color:#FFFFFF;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+}
+
+.btn-create{
+  background-color: #EC1C2D;
+  color:#FFFFFF;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.attachment-mat-card{
+  margin: 1rem 0rem;
+}
+
+.select-file-btn > input { display: none;}
+
+mat-card > mat-card-content > table > tbody > tr > td{
+  vertical-align: middle;
+  word-break: break-all;
+}
+
+.select-file-btn{
+  width: 15%;
+}
+
+.select-file-btn > button {
+  background-color: #EC1C2D;
+}
+
+.delete-file-btn{
+  width: 5%;
+}

@@ -1,0 +1,18 @@
+{
+  "types": [
+    {
+      "ticketType": "Solicitud de requerimiento",
+      "types": [
+        "SVR OP",
+        "SVR SGSI"
+      ]
+    },
+    {
+      "ticketType": "Incidente",
+      "types": [
+        "Reactivo",
+        "Proactivo"
+      ]
+    }
+  ]
+}

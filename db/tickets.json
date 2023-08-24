@@ -1,0 +1,34 @@
+{
+  "tickets": [
+    {
+      "numTicket": "GTR-192033",
+      "openDate": "2023-08-01T14:00:12Z",
+      "closedDate": "2023-08-01T19:00:12Z",
+      "status": "Cerrado",
+      "summary": "Acceso a VPN AnyConnect",
+      "description": "Solicito el acceso a la VPN AnyConnect, para poder realizar mis actividades diarias.",
+      "assignedTo": "Francisco González",
+      "solution": "Se da acceso a la VPN. Se comparte usuario y contraseña en enlace seguro: https://secure.com.mx"
+    },
+    {
+      "numTicket": "GTR-192044",
+      "openDate": "2023-08-11T09:00:12Z",
+      "closedDate": "2023-08-12T05:00:12Z",
+      "status": "Cancelado",
+      "summary": "Acceso a servidor de aplicaciones",
+      "description": "Quisiera tener acceso al servidor de aplicaciones.",
+      "assignedTo": "Marco Rodríguez",
+      "solution": "No especifica qué perfil es el que se le debe de asignar. Favor de crear un nuevo ticket."
+    },
+    {
+      "numTicket": "GTR-192999",
+      "openDate": "2023-08-11T18:00:00Z",
+      "closedDate": "",
+      "status": "En progreso",
+      "summary": "Acceso de IP1 al FW3",
+      "description": "Por favor de darme acceso al FW3 desde la IP de mi casa, ya que estoy en HomeOffice y requiero acceder a un recurso por ese FW.",
+      "assignedTo": "Gustavo Rodríguez",
+      "solution": ""
+    }
+  ]
+}

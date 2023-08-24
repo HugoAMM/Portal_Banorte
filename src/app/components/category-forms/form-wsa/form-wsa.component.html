@@ -1,0 +1,62 @@
+<div>
+  <form [formGroup]="informationFormBuilder">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div formArrayName="fields">
+          <div *ngFor="let wsaForm of fields.controls; let i = index">
+            <form [formGroup]="getFormGroup(wsaForm)">
+              <div class="columns is-centered">
+                <div class="column is-4">
+                  <mat-form-field appearance="fill" class="full-width boc-font">
+                    <mat-label>Origen</mat-label>
+                    <input matInput type="text" formControlName="source" (keyup)="emmitData()" />
+                  </mat-form-field>
+                </div>
+                <div class="column is-4">
+                  <mat-form-field appearance="fill" class="full-width boc-font">
+                    <mat-label>Destino</mat-label>
+                    <input matInput type="text" formControlName="destination" (keyup)="emmitData()" />
+                  </mat-form-field>
+                </div>
+                <div class="column is-3 m-2">
+                  <button mat-icon-button *ngIf="fields.controls.length > 1" (click)="deleteFields(i)" type="button"
+                    class="delete-btn">
+                    <div class="columns m-0 is-vcentered">
+                      <mat-icon matSuffix>delete</mat-icon>
+                    </div>
+                  </button>
+                  <button mat-icon-button *ngIf="i == 0" type="button" color="primary" class="ml-3"
+                    (click)="addFields()">
+                    <div class="columns m-0 is-vcentered">
+                      <mat-icon matSuffix>add</mat-icon>
+                      <div class="mt-1 ml-1 boc-font">Añadir</div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="column is-2 m-3">
+        <input formControlName="file" type="file" class="file-input" [accept]="requiredFileType"
+          (change)="selectFile($event)" #fileUpload />
+        <button type="button" mat-raised-button color="primary" class="boc-font" *ngIf="!fileAttachmentInfo.fileName"
+          (click)="fileUpload.click()">
+          Seleccionar Archivo
+        </button>
+        <div *ngIf="fileAttachmentInfo.fileName" class="has-text-weight-bold boc-font">
+          <span>{{ fileAttachmentInfo.fileName }}</span>
+          <button mat-icon-button color="warn" type="button" (click)="removeFile()">
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+  <div class="columns is-centered boc-font">
+    <div *ngIf="fields.controls.length > 1" class="column is-6 is-italic has-text-grey pt-0">
+      Nota: En caso de requerir varios orígenes y destinos, te sugerimos subir un archivo.
+    </div>
+  </div>
+</div>
